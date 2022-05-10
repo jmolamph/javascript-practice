@@ -8,7 +8,11 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    const new_str = str.replace(/[^a-zA-Z]/gm,"");
+    for (let i = 0, j = new_str.length-1; i < j; i++, j--) {
+        if (new_str.charAt(i).toLowerCase() !== new_str.charAt(j).toLowerCase()) return false;
+    }
+    return true;
 }
 
 const tests = [

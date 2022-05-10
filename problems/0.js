@@ -9,7 +9,16 @@
  * @example 92 -> "A", 75 -> "B"
 */
 function problem(percentage) {
-    return null;
+    if (percentage < 60) {
+        return "F";
+    } else if (percentage < 70) {
+        return "D";
+    } else if (percentage < 80) {
+        return "C";
+    } else if (percentage < 90) {
+        return "B";
+    } 
+    return "A";
 }
 
 const tests= [
