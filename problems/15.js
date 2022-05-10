@@ -11,7 +11,21 @@
  * @example 15 -> [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"]
 */
 function problem(number) {
-    return null;
+    let numberCount = Array.from({length: number}, (x, i) => i + 1);
+    let fizzBuzz = numberCount.map(function(item) {
+        if (item % 3 === 0) {
+            if (item % 5 === 0) {
+                return "FizzBuzz";
+            }
+            return "Fizz";
+        } else if (item % 5 === 0) {
+            return "Buzz";
+        } else {
+            return item;
+        }
+    });
+
+    return fizzBuzz;
 }
 
 const tests = [
